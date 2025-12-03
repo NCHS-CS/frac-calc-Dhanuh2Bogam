@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-// TODO: Description of what this program does goes here.
+//  Description of what this program does goes here.
 public class FracCalc {
 
    // It is best if we have only one console object for input
@@ -44,8 +44,8 @@ public class FracCalc {
    // Prompt the user with a simple, "Enter: " and get the line of input.
    // Return the full line that the user typed in.
    public static String getInput() {
-      // TODO: Implement this method
-       return "quit";
+      System.out.print("Enter: ");
+       return console.nextLine();
 
    }
    
@@ -80,20 +80,19 @@ public class FracCalc {
    //        2 1/8
    //        2 1/4
    public static String processExpression(String input) {
-      // TODO: implement this method!
     
-        return "reduced result of expression";
+        return input;
 
    }
    
    // Returns a string that is helpful to the user about how
    // to use the program. These are instructions to the user.
    public static String provideHelp() {
-      // TODO: Update this help text!
-     
-      String help = "You must change this text.\n";
-      help += "Students, you need to provide actual helpful text here!";
-      
+     String help = "If extra help is needed: ";
+      help += "- Try entering expressions like: 1/2 + 3_1/4\n";
+      help += "- Type 'help' to see this message\n";
+      help += "-  Type 'quit' to exit the program\n";
+      help+= "test 1 to check for the first CP\n";
       return help;
    }
 }

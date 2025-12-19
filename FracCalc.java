@@ -84,18 +84,18 @@ public class FracCalc {
    //
    //
    //This is the place where we will be handling the main operations.
-   public static String processExpression(String input) {
-input = input.trim();//Oracle said that .trim(); gets rid of any whitespace from the ends of this string
-int firstSpace = input.indexOf(" ");
-int secondSpace = input.indexOf(" ", firstSpace + 1);
+public static String processExpression(String input) {
+   input = input.trim();//Oracle said that .trim(); gets rid of any whitespace from the ends of this string
+   int firstSpace = input.indexOf(" ");
+   int secondSpace = input.indexOf(" ", firstSpace + 1);
 
-String first = input.substring(0, firstSpace).trim();
-String second = input.substring(secondSpace + 1).trim();
-String operator = input.substring(firstSpace + 1, secondSpace).trim();
-int num1 =  getImproperNumerator(first);
- int den1 = getDenominator(first);
-int num2 = getImproperNumerator(second);
-int den2 = getDenominator(second);
+   String first = input.substring(0, firstSpace).trim();
+   String second = input.substring(secondSpace + 1).trim();
+   String operator = input.substring(firstSpace + 1, secondSpace).trim();
+   int num1 =  getImproperNumerator(first);
+   int den1 = getDenominator(first);
+   int num2 = getImproperNumerator(second);
+   int den2 = getDenominator(second);
  
    int numerator = 0;
    int denominator = 0;
@@ -134,11 +134,11 @@ int den2 = getDenominator(second);
  //Gets the improper Numerator in the equation
  //Using the methods that get the individual components. 
  public static int getImproperNumerator(String frac){
- int whole = getWhole(frac);
- int num = getNumerator(frac);
- int den = getDenominator(frac);
- if(whole < 0){
-   num *= -1;
+   int whole = getWhole(frac);
+   int num = getNumerator(frac);
+   int den = getDenominator(frac);
+   if(whole < 0){
+      num *= -1;
  }
  return whole * den + num;
 }
